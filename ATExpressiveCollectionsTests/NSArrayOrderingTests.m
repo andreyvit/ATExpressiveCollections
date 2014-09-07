@@ -21,7 +21,7 @@
 
 - (void)test_minimalElementOrderedByIntegerScoringBlock {
     NSArray *array = @[@11, @42, @26, @14, @30];
-    id result = [array at_minimalElementOrderedByIntegerScoringBlock:^NSInteger(NSNumber *value) {
+    id result = [array at_minimalElementOrderedByIntegerScoringBlock:^NSInteger(NSNumber *value, NSUInteger idx) {
         return [value integerValue] % 10;
     }];
     XCTAssertEqualObjects(result, @30);
@@ -29,7 +29,7 @@
 
 - (void)test_maximalElementOrderedByIntegerScoringBlock {
     NSArray *array = @[@11, @42, @26, @14, @30];
-    id result = [array at_maximalElementOrderedByIntegerScoringBlock:^NSInteger(NSNumber *value) {
+    id result = [array at_maximalElementOrderedByIntegerScoringBlock:^NSInteger(NSNumber *value, NSUInteger idx) {
         return [value integerValue] % 10;
     }];
     XCTAssertEqualObjects(result, @26);
@@ -37,7 +37,7 @@
 
 - (void)test_minimalElementOrderedByDoubleScoringBlock {
     NSArray *array = @[@11, @42, @26, @14, @30];
-    id result = [array at_minimalElementOrderedByDoubleScoringBlock:^double(id value) {
+    id result = [array at_minimalElementOrderedByDoubleScoringBlock:^double(id value, NSUInteger idx) {
         NSInteger v = [value integerValue];
         NSInteger firstDigit = v / 10;
         return (v % 2) + (double)firstDigit / 10;
@@ -47,7 +47,7 @@
 
 - (void)test_maximalElementOrderedByDoubleScoringBlock {
     NSArray *array = @[@11, @42, @26, @14, @30];
-    id result = [array at_maximalElementOrderedByDoubleScoringBlock:^double(id value) {
+    id result = [array at_maximalElementOrderedByDoubleScoringBlock:^double(id value, NSUInteger idx) {
         NSInteger v = [value integerValue];
         NSInteger firstDigit = v / 10;
         return (v % 2) + (double)firstDigit / 10;

@@ -2,7 +2,7 @@
 
 TODO description.
 
-Remember that you can replace “id” with specific types in the block argument lists.
+Helpful hint: When using these methods, remember that you can replace “id” with your specific type in a block's argument list.
 
 
 ## NSArray
@@ -11,7 +11,7 @@ Mapping:
 
 * `at_arrayWithValuesOfBlock:` (also known as “map”):
 
-        NSArray *result = [array at_arrayWithValuesOfBlock:^id(NSString *value) {
+        NSArray *result = [array at_arrayWithValuesOfBlock:^id(NSString *value, NSUInteger idx) {
             return [value uppercaseString];
         }];
 
@@ -23,7 +23,7 @@ Filtering:
 
 * `at_arrayOfElementsPassingTest:`
 
-        NSArray *result = [array at_arrayOfElementsPassingTest:^BOOL(NSString *value) {
+        NSArray *result = [array at_arrayOfElementsPassingTest:^BOOL(NSString *value, NSUInteger idx) {
             return [value rangeOfString:@"o"].location != NSNotFound;
         }];
 
@@ -52,7 +52,7 @@ Ordering:
 
     Example:
 
-        id result = [@[@11, @42, @26, @14, @30] at_minimalElementOrderedByIntegerScoringBlock:^NSInteger(NSNumber *value) {
+        id result = [@[@11, @42, @26, @14, @30] at_minimalElementOrderedByIntegerScoringBlock:^NSInteger(NSNumber *value, NSUInteger idx) {
             return [value integerValue] % 10;
         }];
 

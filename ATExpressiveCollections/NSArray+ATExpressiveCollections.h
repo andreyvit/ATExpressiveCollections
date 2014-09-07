@@ -3,7 +3,7 @@
 
 @interface NSArray (ATExpressiveCollections_MappingMethods)
 
-- (NSArray *)at_arrayWithValuesOfBlock:(id(^)(id value))block;
+- (NSArray *)at_arrayWithValuesOfBlock:(id(^)(id value, NSUInteger idx))block;
 
 - (NSArray *)at_arrayWithValuesOfKeyPath:(NSString *)keyPath;  // like valueOfKeyPath:, but more explicit and skips nil values
 
@@ -12,7 +12,7 @@
 
 @interface NSArray (ATExpressiveCollections_FilteringMethods)
 
-- (NSArray *)at_arrayOfElementsPassingTest:(BOOL(^)(id value))block;
+- (NSArray *)at_arrayOfElementsPassingTest:(BOOL(^)(id value, NSUInteger idx))block;
 
 @end
 
@@ -30,13 +30,13 @@
 - (id)at_minimalElement;
 - (id)at_maximalElement;
 
-- (id)at_minimalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value))block;
-- (id)at_maximalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value))block;
+- (id)at_minimalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value, NSUInteger idx))block;
+- (id)at_maximalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value, NSUInteger idx))block;
 
-- (id)at_minimalElementOrderedByDoubleScoringBlock:(double(^)(id value))block;
-- (id)at_maximalElementOrderedByDoubleScoringBlock:(double(^)(id value))block;
+- (id)at_minimalElementOrderedByDoubleScoringBlock:(double(^)(id value, NSUInteger idx))block;
+- (id)at_maximalElementOrderedByDoubleScoringBlock:(double(^)(id value, NSUInteger idx))block;
 
-- (id)at_minimalElementOrderedByObjectScoringBlock:(id(^)(id value))block;
-- (id)at_maximalElementOrderedByObjectScoringBlock:(id(^)(id value))block;
+- (id)at_minimalElementOrderedByObjectScoringBlock:(id(^)(id value, NSUInteger idx))block;
+- (id)at_maximalElementOrderedByObjectScoringBlock:(id(^)(id value, NSUInteger idx))block;
 
 @end

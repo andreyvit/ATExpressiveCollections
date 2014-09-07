@@ -2,19 +2,19 @@
 
 @implementation NSArray (ATExpressiveCollections_MappingMethods)
 
-- (NSArray *)at_arrayWithValuesOfBlock:(id(^)(id value))block {
+- (NSArray *)at_arrayWithValuesOfBlock:(id(^)(id value, NSUInteger idx))block {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self count]];
-    for (id element in self) {
-        id value = block(element);
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        id value = block(element, idx);
         if (value != nil) {
             [result addObject:value];
         }
-    }
+    }];
     return result;
 }
 
 - (NSArray *)at_arrayWithValuesOfKeyPath:(NSString *)keyPath {
-    return [self at_arrayWithValuesOfBlock:^id(id element) {
+    return [self at_arrayWithValuesOfBlock:^id(id element, NSUInteger idx) {
         return [element valueForKeyPath:keyPath];
     }];
 }
@@ -24,13 +24,13 @@
 
 @implementation NSArray (ATExpressiveCollections_FilteringMethods)
 
-- (NSArray *)at_arrayOfElementsPassingTest:(BOOL(^)(id value))block {
+- (NSArray *)at_arrayOfElementsPassingTest:(BOOL(^)(id value, NSUInteger idx))block {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self count]];
-    for (id element in self) {
-        if (block(element)) {
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        if (block(element, idx)) {
             [result addObject:element];
         }
-    }
+    }];
     return result;
 }
 
@@ -62,98 +62,98 @@
 
 @implementation NSArray (ATExpressiveCollections_OrderingMethods)
 
-- (id)at_minimalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value))block {
-    id bestElement = nil;
-    NSInteger bestScore = NSIntegerMax;
+- (id)at_minimalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value, NSUInteger idx))block {
+    __block id bestElement = nil;
+    __block NSInteger bestScore = NSIntegerMax;
 
-    for (id element in self) {
-        NSInteger score = block(element);
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        NSInteger score = block(element, idx);
         if (bestElement == nil || score < bestScore) {
             bestElement = element;
             bestScore = score;
         }
-    }
+    }];
     return bestElement;
 }
 
-- (id)at_minimalElementOrderedByDoubleScoringBlock:(double(^)(id value))block {
-    id bestElement = nil;
-    double bestScore = DBL_MAX;
+- (id)at_minimalElementOrderedByDoubleScoringBlock:(double(^)(id value, NSUInteger idx))block {
+    __block id bestElement = nil;
+    __block double bestScore = DBL_MAX;
 
-    for (id element in self) {
-        double score = block(element);
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        double score = block(element, idx);
         if (bestElement == nil || score < bestScore) {
             bestElement = element;
             bestScore = score;
         }
-    }
+    }];
     return bestElement;
 }
 
-- (id)at_minimalElementOrderedByObjectScoringBlock:(id(^)(id value))block {
-    id bestElement = nil;
-    id bestScore = nil;
+- (id)at_minimalElementOrderedByObjectScoringBlock:(id(^)(id value, NSUInteger idx))block {
+    __block id bestElement = nil;
+    __block id bestScore = nil;
 
-    for (id element in self) {
-        id score = block(element);
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        id score = block(element, idx);
         if (bestElement == nil || [score compare:bestScore] == NSOrderedAscending) {
             bestElement = element;
             bestScore = score;
         }
-    }
+    }];
     return bestElement;
 }
 
 - (id)at_minimalElement {
-    return [self at_minimalElementOrderedByObjectScoringBlock:^id(id value) {
+    return [self at_minimalElementOrderedByObjectScoringBlock:^id(id value, NSUInteger idx) {
         return value;
     }];
 }
 
-- (id)at_maximalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value))block {
-    id bestElement = nil;
-    NSInteger bestScore = NSIntegerMax;
+- (id)at_maximalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value, NSUInteger idx))block {
+    __block id bestElement = nil;
+    __block NSInteger bestScore = NSIntegerMax;
 
-    for (id element in self) {
-        NSInteger score = block(element);
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        NSInteger score = block(element, idx);
         if (bestElement == nil || score > bestScore) {
             bestElement = element;
             bestScore = score;
         }
-    }
+    }];
     return bestElement;
 }
 
-- (id)at_maximalElementOrderedByDoubleScoringBlock:(double(^)(id value))block {
-    id bestElement = nil;
-    double bestScore = DBL_MIN;
+- (id)at_maximalElementOrderedByDoubleScoringBlock:(double(^)(id value, NSUInteger idx))block {
+    __block id bestElement = nil;
+    __block double bestScore = DBL_MIN;
 
-    for (id element in self) {
-        double score = block(element);
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        double score = block(element, idx);
         if (bestElement == nil || score > bestScore) {
             bestElement = element;
             bestScore = score;
         }
-    }
+    }];
     return bestElement;
 }
 
-- (id)at_maximalElementOrderedByObjectScoringBlock:(id(^)(id value))block {
-    id bestElement = nil;
-    id bestScore = nil;
+- (id)at_maximalElementOrderedByObjectScoringBlock:(id(^)(id value, NSUInteger idx))block {
+    __block id bestElement = nil;
+    __block id bestScore = nil;
 
-    for (id element in self) {
-        id score = block(element);
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        id score = block(element, idx);
         if (bestElement == nil || [score compare:bestScore] == NSOrderedDescending) {
             bestElement = element;
             bestScore = score;
         }
-    }
+    }];
     return bestElement;
 }
 
 - (id)at_maximalElement {
-    return [self at_maximalElementOrderedByObjectScoringBlock:^id(id value) {
+    return [self at_maximalElementOrderedByObjectScoringBlock:^id(id value, NSUInteger idx) {
         return value;
     }];
 }

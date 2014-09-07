@@ -9,7 +9,7 @@
 
 - (void)test_arrayWithValuesOfBlock {
     NSArray *array = @[@"foo", @"bar", @"boz"];
-    NSArray *result = [array at_arrayWithValuesOfBlock:^id(id value) {
+    NSArray *result = [array at_arrayWithValuesOfBlock:^id(id value, NSUInteger idx) {
         return [value uppercaseString];
     }];
     NSArray *expected = @[@"FOO", @"BAR", @"BOZ"];
@@ -18,7 +18,7 @@
 
 - (void)test_arrayWithValuesOfBlock_nil {
     NSArray *array = @[@"foo", @"bar", @"boz"];
-    NSArray *result = [array at_arrayWithValuesOfBlock:^id(id value) {
+    NSArray *result = [array at_arrayWithValuesOfBlock:^id(id value, NSUInteger idx) {
         if ([value rangeOfString:@"o"].location != NSNotFound) {
             return [value uppercaseString];
         } else {

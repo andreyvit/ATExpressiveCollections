@@ -9,7 +9,7 @@
 
 - (void)test_arrayWithValuesOfBlock {
     NSArray *array = @[@"foo", @"bar", @"boz"];
-    NSArray *result = [array at_arrayOfElementsPassingTest:^BOOL(NSString *value) {
+    NSArray *result = [array at_arrayOfElementsPassingTest:^BOOL(NSString *value, NSUInteger idx) {
         return [value rangeOfString:@"o"].location != NSNotFound;
     }];
     NSArray *expected = @[@"foo", @"boz"];
