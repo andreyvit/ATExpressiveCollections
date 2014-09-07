@@ -17,6 +17,14 @@
 @end
 
 
+@interface NSArray (ATExpressiveCollections_SearchingMethods)
+
+- (id)at_firstElementPassingTest:(BOOL(^)(id value, NSUInteger idx, BOOL *stop))block;
+- (id)at_lastElementPassingTest:(BOOL(^)(id value, NSUInteger idx, BOOL *stop))block;
+
+@end
+
+
 @interface NSArray (ATExpressiveCollections_OrderingMethods)
 
 - (id)at_minimalElement;

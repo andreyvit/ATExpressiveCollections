@@ -27,6 +27,14 @@ Filtering:
             return [value rangeOfString:@"o"].location != NSNotFound;
         }];
 
+Searching:
+
+* `at_firstElementPassingTest:`, `at_lastElementPassingTest:`
+
+        id result = [@[@11, @42, @26, @14, @30] at_firstElementPassingTest:^BOOL(id value, NSUInteger idx, BOOL *stop) {
+            return [value integerValue] >= 20;
+        }];
+
 Ordering:
 
 * `at_minimalElement`, `at_maximalElement`:

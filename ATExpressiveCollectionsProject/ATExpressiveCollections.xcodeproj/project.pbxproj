@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432DA52C19BC91AA0017B687 /* NSArraySearchingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 432DA52B19BC91AA0017B687 /* NSArraySearchingTests.m */; };
 		4340236619BC66C100C842D1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4340236519BC66C100C842D1 /* Cocoa.framework */; };
 		4340237719BC66C100C842D1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4340237619BC66C100C842D1 /* XCTest.framework */; };
 		4340237819BC66C100C842D1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4340236519BC66C100C842D1 /* Cocoa.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		432DA52B19BC91AA0017B687 /* NSArraySearchingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArraySearchingTests.m; sourceTree = "<group>"; };
 		4340236219BC66C100C842D1 /* libATExpressiveCollections.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libATExpressiveCollections.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4340236519BC66C100C842D1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4340236819BC66C100C842D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +143,7 @@
 				4340239819BC688A00C842D1 /* NSArrayMappingTests.m */,
 				4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */,
 				4340239E19BC871400C842D1 /* NSArrayOrderingTests.m */,
+				432DA52B19BC91AA0017B687 /* NSArraySearchingTests.m */,
 			);
 			name = ATExpressiveCollectionsTests;
 			path = ../ATExpressiveCollectionsTests;
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */,
+				432DA52C19BC91AA0017B687 /* NSArraySearchingTests.m in Sources */,
 				4340239F19BC871400C842D1 /* NSArrayOrderingTests.m in Sources */,
 				4340239D19BC6ECF00C842D1 /* NSArrayFilteringTests.m in Sources */,
 			);

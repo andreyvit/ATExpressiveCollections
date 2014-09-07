@@ -37,6 +37,29 @@
 @end
 
 
+@implementation NSArray (ATExpressiveCollections_SearchingMethods)
+
+- (id)at_firstElementPassingTest:(BOOL(^)(id value, NSUInteger idx, BOOL *stop))block {
+    NSUInteger idx = [self indexOfObjectWithOptions:0 passingTest:block];
+    if (idx == NSNotFound) {
+        return nil;
+    } else {
+        return self[idx];
+    }
+}
+
+- (id)at_lastElementPassingTest:(BOOL(^)(id value, NSUInteger idx, BOOL *stop))block {
+    NSUInteger idx = [self indexOfObjectWithOptions:NSEnumerationReverse passingTest:block];
+    if (idx == NSNotFound) {
+        return nil;
+    } else {
+        return self[idx];
+    }
+}
+
+@end
+
+
 @implementation NSArray (ATExpressiveCollections_OrderingMethods)
 
 - (id)at_minimalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value))block {
