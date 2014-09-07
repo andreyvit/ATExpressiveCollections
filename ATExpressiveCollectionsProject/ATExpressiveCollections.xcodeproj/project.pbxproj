@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4340236619BC66C100C842D1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4340236519BC66C100C842D1 /* Cocoa.framework */; };
+		4340237719BC66C100C842D1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4340237619BC66C100C842D1 /* XCTest.framework */; };
+		4340237819BC66C100C842D1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4340236519BC66C100C842D1 /* Cocoa.framework */; };
+		4340237B19BC66C100C842D1 /* libATExpressiveCollections.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4340236219BC66C100C842D1 /* libATExpressiveCollections.a */; };
+		4340239119BC684500C842D1 /* NSArray+ATExpressiveCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 4340238D19BC684500C842D1 /* NSArray+ATExpressiveCollections.h */; };
+		4340239219BC684500C842D1 /* NSArray+ATExpressiveCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340238E19BC684500C842D1 /* NSArray+ATExpressiveCollections.m */; };
+		4340239319BC684500C842D1 /* NSDictionary+ATExpressiveCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 4340238F19BC684500C842D1 /* NSDictionary+ATExpressiveCollections.h */; };
+		4340239419BC684500C842D1 /* NSDictionary+ATExpressiveCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239019BC684500C842D1 /* NSDictionary+ATExpressiveCollections.m */; };
+		4340239719BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4340239619BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist */; };
+		4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239819BC688A00C842D1 /* NSArrayMappingTests.m */; };
+		4340239B19BC6A3100C842D1 /* ATExpressiveCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4340237919BC66C100C842D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4340235A19BC66C100C842D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4340236119BC66C100C842D1;
+			remoteInfo = ATExpressiveCollections;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4340236219BC66C100C842D1 /* libATExpressiveCollections.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libATExpressiveCollections.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4340236519BC66C100C842D1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4340236819BC66C100C842D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4340236919BC66C100C842D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4340236A19BC66C100C842D1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4340237519BC66C100C842D1 /* ATExpressiveCollectionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATExpressiveCollectionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4340237619BC66C100C842D1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4340238D19BC684500C842D1 /* NSArray+ATExpressiveCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ATExpressiveCollections.h"; sourceTree = "<group>"; };
+		4340238E19BC684500C842D1 /* NSArray+ATExpressiveCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ATExpressiveCollections.m"; sourceTree = "<group>"; };
+		4340238F19BC684500C842D1 /* NSDictionary+ATExpressiveCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ATExpressiveCollections.h"; sourceTree = "<group>"; };
+		4340239019BC684500C842D1 /* NSDictionary+ATExpressiveCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ATExpressiveCollections.m"; sourceTree = "<group>"; };
+		4340239619BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ATExpressiveCollectionsTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4340239819BC688A00C842D1 /* NSArrayMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayMappingTests.m; sourceTree = "<group>"; };
+		4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATExpressiveCollections.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4340235F19BC66C100C842D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4340236619BC66C100C842D1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4340237219BC66C100C842D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4340237819BC66C100C842D1 /* Cocoa.framework in Frameworks */,
+				4340237B19BC66C100C842D1 /* libATExpressiveCollections.a in Frameworks */,
+				4340237719BC66C100C842D1 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4340235919BC66C100C842D1 = {
+			isa = PBXGroup;
+			children = (
+				4340238C19BC684500C842D1 /* ATExpressiveCollections */,
+				4340239519BC684F00C842D1 /* ATExpressiveCollectionsTests */,
+				4340236B19BC66C100C842D1 /* Supporting Files */,
+				4340236419BC66C100C842D1 /* Frameworks */,
+				4340236319BC66C100C842D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4340236319BC66C100C842D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4340236219BC66C100C842D1 /* libATExpressiveCollections.a */,
+				4340237519BC66C100C842D1 /* ATExpressiveCollectionsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4340236419BC66C100C842D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4340236519BC66C100C842D1 /* Cocoa.framework */,
+				4340237619BC66C100C842D1 /* XCTest.framework */,
+				4340236719BC66C100C842D1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4340236719BC66C100C842D1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4340236819BC66C100C842D1 /* Foundation.framework */,
+				4340236919BC66C100C842D1 /* CoreData.framework */,
+				4340236A19BC66C100C842D1 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4340236B19BC66C100C842D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4340239619BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ATExpressiveCollections;
+			sourceTree = "<group>";
+		};
+		4340238C19BC684500C842D1 /* ATExpressiveCollections */ = {
+			isa = PBXGroup;
+			children = (
+				4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */,
+				4340238D19BC684500C842D1 /* NSArray+ATExpressiveCollections.h */,
+				4340238E19BC684500C842D1 /* NSArray+ATExpressiveCollections.m */,
+				4340238F19BC684500C842D1 /* NSDictionary+ATExpressiveCollections.h */,
+				4340239019BC684500C842D1 /* NSDictionary+ATExpressiveCollections.m */,
+			);
+			name = ATExpressiveCollections;
+			path = ../ATExpressiveCollections;
+			sourceTree = "<group>";
+		};
+		4340239519BC684F00C842D1 /* ATExpressiveCollectionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				4340239819BC688A00C842D1 /* NSArrayMappingTests.m */,
+			);
+			name = ATExpressiveCollectionsTests;
+			path = ../ATExpressiveCollectionsTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4340236019BC66C100C842D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4340239319BC684500C842D1 /* NSDictionary+ATExpressiveCollections.h in Headers */,
+				4340239B19BC6A3100C842D1 /* ATExpressiveCollections.h in Headers */,
+				4340239119BC684500C842D1 /* NSArray+ATExpressiveCollections.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4340236119BC66C100C842D1 /* ATExpressiveCollections */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4340238619BC66C100C842D1 /* Build configuration list for PBXNativeTarget "ATExpressiveCollections" */;
+			buildPhases = (
+				4340235E19BC66C100C842D1 /* Sources */,
+				4340235F19BC66C100C842D1 /* Frameworks */,
+				4340236019BC66C100C842D1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATExpressiveCollections;
+			productName = ATExpressiveCollections;
+			productReference = 4340236219BC66C100C842D1 /* libATExpressiveCollections.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4340237419BC66C100C842D1 /* ATExpressiveCollectionsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4340238919BC66C100C842D1 /* Build configuration list for PBXNativeTarget "ATExpressiveCollectionsTests" */;
+			buildPhases = (
+				4340237119BC66C100C842D1 /* Sources */,
+				4340237219BC66C100C842D1 /* Frameworks */,
+				4340237319BC66C100C842D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4340237A19BC66C100C842D1 /* PBXTargetDependency */,
+			);
+			name = ATExpressiveCollectionsTests;
+			productName = ATExpressiveCollectionsTests;
+			productReference = 4340237519BC66C100C842D1 /* ATExpressiveCollectionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4340235A19BC66C100C842D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Andrey Tarantsov";
+			};
+			buildConfigurationList = 4340235D19BC66C100C842D1 /* Build configuration list for PBXProject "ATExpressiveCollections" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4340235919BC66C100C842D1;
+			productRefGroup = 4340236319BC66C100C842D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4340236119BC66C100C842D1 /* ATExpressiveCollections */,
+				4340237419BC66C100C842D1 /* ATExpressiveCollectionsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4340237319BC66C100C842D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4340239719BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4340235E19BC66C100C842D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4340239219BC684500C842D1 /* NSArray+ATExpressiveCollections.m in Sources */,
+				4340239419BC684500C842D1 /* NSDictionary+ATExpressiveCollections.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4340237119BC66C100C842D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4340237A19BC66C100C842D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4340236119BC66C100C842D1 /* ATExpressiveCollections */;
+			targetProxy = 4340237919BC66C100C842D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4340238419BC66C100C842D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4340238519BC66C100C842D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4340238719BC66C100C842D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4340238819BC66C100C842D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4340238A19BC66C100C842D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ATExpressiveCollectionsTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../ATExpressiveCollections;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4340238B19BC66C100C842D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ATExpressiveCollectionsTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ../ATExpressiveCollections;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4340235D19BC66C100C842D1 /* Build configuration list for PBXProject "ATExpressiveCollections" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4340238419BC66C100C842D1 /* Debug */,
+				4340238519BC66C100C842D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4340238619BC66C100C842D1 /* Build configuration list for PBXNativeTarget "ATExpressiveCollections" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4340238719BC66C100C842D1 /* Debug */,
+				4340238819BC66C100C842D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4340238919BC66C100C842D1 /* Build configuration list for PBXNativeTarget "ATExpressiveCollectionsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4340238A19BC66C100C842D1 /* Debug */,
+				4340238B19BC66C100C842D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4340235A19BC66C100C842D1 /* Project object */;
+}
