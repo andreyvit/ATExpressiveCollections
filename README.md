@@ -26,3 +26,25 @@ Filtering:
         NSArray *result = [array at_arrayOfElementsPassingTest:^BOOL(NSString *value) {
             return [value rangeOfString:@"o"].location != NSNotFound;
         }];
+
+Ordering:
+
+* `at_minimalElement`, `at_maximalElement`:
+
+        id result = [@[@11, @42, @26, @14, @30] at_maximalElement]  // @42
+
+* Minimal/maximal elements with a separate scoring block:
+
+        at_minimalElementOrderedByIntegerScoringBlock:
+        at_maximalElementOrderedByIntegerScoringBlock:
+        at_minimalElementOrderedByDoubleScoringBlock:
+        at_maximalElementOrderedByDoubleScoringBlock:
+        at_minimalElementOrderedByObjectScoringBlock:
+        at_maximalElementOrderedByObjectScoringBlock:
+
+    Example:
+
+        id result = [@[@11, @42, @26, @14, @30] at_minimalElementOrderedByIntegerScoringBlock:^NSInteger(NSNumber *value) {
+            return [value integerValue] % 10;
+        }];
+

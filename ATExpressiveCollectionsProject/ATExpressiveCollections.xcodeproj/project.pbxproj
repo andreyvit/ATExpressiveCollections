@@ -19,6 +19,7 @@
 		4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239819BC688A00C842D1 /* NSArrayMappingTests.m */; };
 		4340239B19BC6A3100C842D1 /* ATExpressiveCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */; };
 		4340239D19BC6ECF00C842D1 /* NSArrayFilteringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */; };
+		4340239F19BC871400C842D1 /* NSArrayOrderingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239E19BC871400C842D1 /* NSArrayOrderingTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4340239819BC688A00C842D1 /* NSArrayMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayMappingTests.m; sourceTree = "<group>"; };
 		4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATExpressiveCollections.h; sourceTree = "<group>"; };
 		4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFilteringTests.m; sourceTree = "<group>"; };
+		4340239E19BC871400C842D1 /* NSArrayOrderingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayOrderingTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				4340239819BC688A00C842D1 /* NSArrayMappingTests.m */,
 				4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */,
+				4340239E19BC871400C842D1 /* NSArrayOrderingTests.m */,
 			);
 			name = ATExpressiveCollectionsTests;
 			path = ../ATExpressiveCollectionsTests;
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */,
+				4340239F19BC871400C842D1 /* NSArrayOrderingTests.m in Sources */,
 				4340239D19BC6ECF00C842D1 /* NSArrayFilteringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

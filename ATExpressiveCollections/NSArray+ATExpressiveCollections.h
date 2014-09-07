@@ -15,3 +15,20 @@
 - (NSArray *)at_arrayOfElementsPassingTest:(BOOL(^)(id value))block;
 
 @end
+
+
+@interface NSArray (ATExpressiveCollections_OrderingMethods)
+
+- (id)at_minimalElement;
+- (id)at_maximalElement;
+
+- (id)at_minimalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value))block;
+- (id)at_maximalElementOrderedByIntegerScoringBlock:(NSInteger(^)(id value))block;
+
+- (id)at_minimalElementOrderedByDoubleScoringBlock:(double(^)(id value))block;
+- (id)at_maximalElementOrderedByDoubleScoringBlock:(double(^)(id value))block;
+
+- (id)at_minimalElementOrderedByObjectScoringBlock:(id(^)(id value))block;
+- (id)at_maximalElementOrderedByObjectScoringBlock:(id(^)(id value))block;
+
+@end
