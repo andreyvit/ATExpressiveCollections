@@ -18,6 +18,7 @@
 		4340239719BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4340239619BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist */; };
 		4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239819BC688A00C842D1 /* NSArrayMappingTests.m */; };
 		4340239B19BC6A3100C842D1 /* ATExpressiveCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */; };
+		4340239D19BC6ECF00C842D1 /* NSArrayFilteringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		4340239619BC686500C842D1 /* ATExpressiveCollectionsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ATExpressiveCollectionsTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4340239819BC688A00C842D1 /* NSArrayMappingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayMappingTests.m; sourceTree = "<group>"; };
 		4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATExpressiveCollections.h; sourceTree = "<group>"; };
+		4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFilteringTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				4340239819BC688A00C842D1 /* NSArrayMappingTests.m */,
+				4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */,
 			);
 			name = ATExpressiveCollectionsTests;
 			path = ../ATExpressiveCollectionsTests;
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */,
+				4340239D19BC6ECF00C842D1 /* NSArrayFilteringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
