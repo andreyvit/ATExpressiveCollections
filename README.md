@@ -30,7 +30,7 @@ See the docs and examples below, or look at the headers:
 
 Using CocoaPods:
 
-    pod 'ATExpressiveCollections', '~> 1.0.0'
+    pod 'ATExpressiveCollections', '~> 1.0'
 
 
 ## Contribution policy
