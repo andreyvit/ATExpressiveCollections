@@ -21,6 +21,9 @@
 		4340239B19BC6A3100C842D1 /* ATExpressiveCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = 4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */; };
 		4340239D19BC6ECF00C842D1 /* NSArrayFilteringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */; };
 		4340239F19BC871400C842D1 /* NSArrayOrderingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4340239E19BC871400C842D1 /* NSArrayOrderingTests.m */; };
+		4361A7851AC2DB1000B793E2 /* NSArrayGroupingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4361A7841AC2DB1000B793E2 /* NSArrayGroupingTests.m */; };
+		4361A7871AC2DE2B00B793E2 /* NSArrayMultiInstanceGroupingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4361A7861AC2DE2B00B793E2 /* NSArrayMultiInstanceGroupingTests.m */; };
+		4361A7891AC2E20C00B793E2 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4361A7881AC2E20C00B793E2 /* NSDictionaryTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		4340239A19BC6A3100C842D1 /* ATExpressiveCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATExpressiveCollections.h; sourceTree = "<group>"; };
 		4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayFilteringTests.m; sourceTree = "<group>"; };
 		4340239E19BC871400C842D1 /* NSArrayOrderingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayOrderingTests.m; sourceTree = "<group>"; };
+		4361A7841AC2DB1000B793E2 /* NSArrayGroupingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayGroupingTests.m; sourceTree = "<group>"; };
+		4361A7861AC2DE2B00B793E2 /* NSArrayMultiInstanceGroupingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayMultiInstanceGroupingTests.m; sourceTree = "<group>"; };
+		4361A7881AC2E20C00B793E2 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 				4340239C19BC6ECF00C842D1 /* NSArrayFilteringTests.m */,
 				4340239E19BC871400C842D1 /* NSArrayOrderingTests.m */,
 				432DA52B19BC91AA0017B687 /* NSArraySearchingTests.m */,
+				4361A7841AC2DB1000B793E2 /* NSArrayGroupingTests.m */,
+				4361A7861AC2DE2B00B793E2 /* NSArrayMultiInstanceGroupingTests.m */,
+				4361A7881AC2E20C00B793E2 /* NSDictionaryTests.m */,
 			);
 			name = ATExpressiveCollectionsTests;
 			path = ../ATExpressiveCollectionsTests;
@@ -252,7 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4361A7871AC2DE2B00B793E2 /* NSArrayMultiInstanceGroupingTests.m in Sources */,
 				4340239919BC688A00C842D1 /* NSArrayMappingTests.m in Sources */,
+				4361A7851AC2DB1000B793E2 /* NSArrayGroupingTests.m in Sources */,
+				4361A7891AC2E20C00B793E2 /* NSDictionaryTests.m in Sources */,
 				432DA52C19BC91AA0017B687 /* NSArraySearchingTests.m in Sources */,
 				4340239F19BC871400C842D1 /* NSArrayOrderingTests.m in Sources */,
 				4340239D19BC6ECF00C842D1 /* NSArrayFilteringTests.m in Sources */,

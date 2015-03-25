@@ -159,3 +159,63 @@
 }
 
 @end
+
+
+@implementation NSArray (ATExpressiveCollections_GroupingMethods)
+
+- (NSDictionary *)at_keyedElementsIndexedByValueOfBlock:(id(^)(id value, NSUInteger idx))block {
+    NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithCapacity:self.count];
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        id key = block(element, idx);
+        if (key != nil) {
+            result[key] = element;
+        }
+    }];
+    return result;
+}
+
+- (NSDictionary *)at_keyedElementsIndexedByValueOfKeyPath:(NSString *)keyPath {
+    return [self at_keyedElementsIndexedByValueOfBlock:^id(id value, NSUInteger idx) {
+        return [value valueForKeyPath:keyPath];
+    }];
+}
+
+- (NSDictionary *)at_dictionaryMappingElementsToValuesOfBlock:(id(^)(id value, NSUInteger idx))valueBlock {
+    NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithCapacity:self.count];
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        id value = valueBlock(element, idx);
+        if (value != nil) {
+            result[element] = value;
+        }
+    }];
+    return result;
+}
+
+@end
+
+
+@implementation NSArray (ATExpressiveCollections_MultiInstanceGroupingMethods)
+
+- (NSDictionary *)at_keyedArraysOfElementsGroupedByValueOfBlock:(id(^)(id element, NSUInteger idx))block {
+    NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithCapacity:self.count];
+    [self enumerateObjectsUsingBlock:^(id element, NSUInteger idx, BOOL *stop) {
+        id key = block(element, idx);
+        if (key != nil) {
+            NSMutableArray *instances = result[key];
+            if (instances == nil) {
+                instances = [NSMutableArray new];
+                result[key] = instances;
+            }
+            [instances addObject:element];
+        }
+    }];
+    return result;
+}
+
+- (NSDictionary *)at_keyedArraysOfElementsGroupedByValueOfKeyPath:(NSString *)keyPath {
+    return [self at_keyedArraysOfElementsGroupedByValueOfBlock:^id(id element, NSUInteger idx) {
+        return [element valueForKeyPath:keyPath];
+    }];
+}
+
+@end

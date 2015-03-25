@@ -100,3 +100,60 @@ Ordering:
             return [value integerValue] % 10;
         }];
 
+Grouping:
+
+* `at_keyedElementsIndexedByValueOfBlock:`
+
+        NSDictionary *result = [@[@"foo", @"bar", @"boz"] at_keyedElementsIndexedByValueOfBlock:^id(NSString *value, NSUInteger idx) {
+            return [value uppercaseString];
+        }];
+        // returns @{@"FOO": @"foo", @"BAR": @"bar", @"BOZ": @"boz"};
+
+* `at_keyedElementsIndexedByValueOfKeyPath:`
+
+        NSDictionary *result = [@[@"f", @"ba", @"boz"] at_keyedElementsIndexedByValueOfKeyPath:@"length"];
+        // returns @{@1: @"foo", @2: @"bar", @3: @"boz"};
+
+* `at_dictionaryMappingElementsToValuesOfBlock:`
+
+        NSDictionary *result = [@[@"foo", @"bar", @"boz"] at_dictionaryMappingElementsToValuesOfBlock:^id(NSString *value, NSUInteger idx) {
+            return [value uppercaseString];
+        }];
+        // returns @{@"foo": @"FOO", @"bar": @"BAR", @"boz": @"BOZ"};
+
+Multi-instance grouping:
+
+* `at_keyedArraysOfElementsGroupedByValueOfBlock:`
+
+        NSDictionary *result = [@[@"foo", @"bar", @"Foo"] at_keyedArraysOfElementsGroupedByValueOfBlock:^id(NSString *value, NSUInteger idx) {
+            return [value uppercaseString];
+        }];
+        // returns @{@"FOO": @[@"foo", @"Foo"], @"BAR": @[@"bar"]};
+
+* `at_keyedArraysOfElementsGroupedByValueOfKeyPath:`
+
+        NSDictionary *result = [@[@"foo", @"bar", @"fubar"] at_keyedArraysOfElementsGroupedByValueOfKeyPath:@"length"];
+        // returns @{@3: @[@"foo", @"bar"], @5: @[@"fubar"]};
+
+
+## NSDictionary
+
+* `at_dictionaryByReversingKeysAndValues`
+
+        [@{A: P, B: Q, C: R} at_dictionaryByReversingKeysAndValues]  ⇒  @{P: A, Q: B, R: C}
+
+* `at_dictionaryByAddingEntriesFromDictionary:`
+
+* `at_dictionaryByMergingEntriesFromDictionary:usingBlock:`
+
+        [first at_dictionaryByMergingEntriesFromDictionary:second usingBlock:^id(id key, id oldValue, id newValue) {
+            // return the result of merging oldValue with newValue
+        }
+
+* `at_dictionaryByRecursivelyMergingEntriesFromDictionary:`
+
+* `at_arrayWithValuesOfBlock:`
+
+* `at_dictionaryByMappingKeysUsingBlock:`
+
+* `at_dictionaryByMappingValuesUsingBlock:`
