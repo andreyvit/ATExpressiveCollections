@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ATExpressiveCollections"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "NSArray and NSDictionary categories that help you write more expressive code."
   s.description  = <<-DESC
     Rationale, in 3 simple claims:
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   DESC
 
   s.homepage     = 'https://github.com/andreyvit/ATExpressiveCollections'
-  s.source       = { :git => 'https://github.com/andreyvit/ATExpressiveCollections.git', :tag => 'v1.0.0' }
+  s.source       = { :git => 'https://github.com/andreyvit/ATExpressiveCollections.git', :tag => 'v1.1.0' }
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Andrey Tarantsov' => 'andrey@tarantsov.com' }
   s.social_media_url = 'http://twitter.com/andreyvit'
